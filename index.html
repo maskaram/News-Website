@@ -2,69 +2,224 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" herf="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="news"></div>
-    <div class="news_header"></div>
-    <div class="news_content"></div>
-    <div class=news_content_single_wrapper></div>
-        <div class="news_content_single"></div>
-        <div class="news_content_single_category">Business</div>
-        <div class="scrollers"></div>
-        <div class=" news_content_single_collection business"></div>
-          <div class=" news_single_news"></div>
-          <a herf=""class="news_content_single_button"></a>
-          <div class="news_content_single_top"></div>
-          <div class="news_content_single_bottom"></div>
-          <div class="news_publidh_date">
-            <div class="month"></div>
-            <div class="date"></div>
-            <div class="year"></div>
+<div class="news">
+    <div class="news__header">
+        <nav class="navbar navbar-expand-sm bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Home</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#business">Business</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#sports">Sport</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#technology">Technology</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#entertainment">Entertainment</a>
+                  </li>
+                  
+                  
+                </ul>
+                <form class="d-flex" role="search" id="search__form">
+                  <input class="form-control me-2" type="search" placeholder="Search" name="searchnews">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <div class="news__content container pt-5 mt-5">
+        <div class="news__content__single__wrapper d-none" id="serarch__results__parent">
+            <div class="news__content__single">
+                <div class="news__content__single__category__title fw-bold text-uppercase search__results__title">search results for </div>
+                <div class="scrollers d-flex justify-content-between container">
+                    <div class="left__icon fs-2" onclick="Scroll(this,'left')">
+                        <i class="fa fa-angle-left"></i>
+                    </div>
+                    <div class="right__icon fs-2" onclick="Scroll(this,'right')">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="news__content__single__collection searchResults d-flex mx-4">
+                    <div class="news__single__news col-12 col-md-6 col-lg-3 mx-2">
+                        <a href="" class="news__content__single__butto text-decoration-none">
+                            <div class="news__content__single__top">
+                                <div class="news__background" style="background-image: url('https://media.istockphoto.com/id/1345527119/video/graphical-modern-digital-world-news-studio-loop-background.jpg?s=640x640&k=20&c=cr1SYYf7Dix-TgBqiYRLquAmi7TgEE3oZcMUExQ25QY=');">
+                                    <div class="news__content__single__content d-flex flex-column align-items-center">
+                                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </p>
+                                        <p>Read More</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__content__single__bottom d-flex align-items-center mt-2">
+                                <div class="news__publish__date pe-2 d-flex flex-column align-items-center">
+                                    <div class="month">August</div>
+                                    <div class="date">4</div>
+                                    <div class="year">2023</div>
+                                </div>
+                                <div class="news__content__single__title ps-2"> <p>title Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It </p></div>
+                            </div>
 
-            <div class="news_content_single_title"></div>
-          
-          <div class="news_background">
-            <div class="news_content_single_content"></div>
-            <p class="description">Lorem Ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                </div>
 
-            <p>Read More</p>
-            
-    <nav class="navbar navbar-expand-md
-    bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Home</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#business">Business</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#sports">Sports</a>
-              </li>
-                <a class="nav-link" href="#technology">Technology</a>
-              </li>
-                <a class="nav-link" href="#entertaiment">Entertaiment</a>
-              </li>
-             
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+            </div>
         </div>
-      </nav>
+
+        <div class="news__content__single__wrapper" id="business">
+            <div class="news__content__single">
+                <div class="news__content__single__category__title fw-bold text-uppercase">BUSINESS</div>
+                <div class="scrollers d-flex justify-content-between container">
+                    <div class="left__icon fs-2" onclick="Scroll(this,'left')">
+                        <i class="fa fa-angle-left"></i>
+                    </div>
+                    <div class="left__icon fs-2" onclick="Scroll(this,'right')">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="news__content__single__collection business d-flex mx-4">
+                                       
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="news__content__single__wrapper" id="sports">
+            <div class="news__content__single">
+                <div class="news__content__single__category__title fw-bold text-uppercase">sports</div>
+                <div class="scrollers d-flex justify-content-between container">
+                    <div class="left__icon fs-2" onclick="Scroll(this,'left')">
+                        <i class="fa fa-angle-left"></i>
+                    </div>
+                    <div class="right__icon fs-2" onclick="Scroll(this,'right')">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="news__content__single__collection sports d-flex mx-4">
+                    <div class="news__single__news col-12 col-md-6 col-lg-3 mx-2">
+                        <a href="" class="news__content__single__button text-decoration-none">
+                            <div class="news__content__single__top">
+                                <div class="news__background" style="background-image: url('https://media.istockphoto.com/id/1345527119/video/graphical-modern-digital-world-news-studio-loop-background.jpg?s=640x640&k=20&commitc=cr1SYYf7Dix-TgBqiYRLquAmi7TgEE3oZcMUExQ25QY=');">
+                                    <div class="news__content__single__content d-flex flex-column align-items-center">
+                                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </p>
+                                        <p>Read More</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__content__single__bottom d-flex align-items-center mt-2">
+                                <div class="news__publish__date pe-2 d-flex flex-column align-items-center">
+                                    <div class="month">August</div>
+                                    <div class="date">4</div>
+                                    <div class="year">2023</div>
+                                </div>
+                                <div class="news__content__single__title ps-2"> <p>title Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It </p></div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="news__content__single__wrapper" id="technology">
+            <div class="news__content__single">
+                <div class="news__content__single__category__title fw-bold text-uppercase">technology</div>
+                <div class="scrollers d-flex justify-content-between container">
+                    <div class="left__icon fs-2" onclick="Scroll(this,'left')">
+                        <i class="fa fa-angle-left"></i>
+                    </div>
+                    <div class="left__icon fs-2" onclick="Scroll(this,'left')">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="news__content__single__collection technology d-flex mx-4">
+                    <div class="news__single__news col-12 col-md-6 col-lg-3 mx-2">
+                        <a href="" class="news__content__single__button text-decoration-none">
+                            <div class="news__content__single__top">
+                                <div class="news__background" style="background-image: url('https://media.istockphoto.com/id/1345527119/video/graphical-modern-digital-world-news-studio-loop-background.jpg?s=640x640&k=20&c=cr1SYYf7Dix-TgBqiYRLquAmi7TgEE3oZcMUExQ25QY=');">
+                                    <div class="news__content__single__content d-flex flex-column align-items-center">
+                                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </p>
+                                        <p>Read More</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__content__single__bottom d-flex align-items-center mt-2">
+                                <div class="news__publish__date pe-2 d-flex flex-column align-items-center">
+                                    <div class="month">August</div>
+                                    <div class="date">4</div>
+                                    <div class="year">2023</div>
+                                </div>
+                                <div class="news__content__single__title ps-2"> <p>title Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It </p></div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="news__content__single__wrapper" id="entertainment">
+            <div class="news__content__single">
+                <div class="news__content__single__category__title fw-bold text-uppercase">entertainment</div>
+                <div class="scrollers d-flex justify-content-between container">
+                    <div class="left__icon fs-2" onclick="Scroll(this,'left')">
+                        <i class="fa fa-angle-left"></i>
+                    </div>
+                    <div class="left__icon fs-2" onclick="Scroll(this,'left')">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="news__content__single__collection entertainment d-flex mx-4">
+                    <div class="news__single__news col-12 col-md-6 col-lg-3 mx-2">
+                        <a href="" class="news__content__single__button text-decoration-none">
+                            <div class="news__content__single__top">
+                                <div class="news__background" style="background-image: url('https://media.istockphoto.com/id/1345527119/video/graphical-modern-digital-world-news-studio-loop-background.jpg?s=640x640&k=20&c=cr1SYYf7Dix-TgBqiYRLquAmi7TgEE3oZcMUExQ25QY=');">
+                                    <div class="news__content__single__content d-flex flex-column align-items-center">
+                                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </p>
+                                        <p>Read More</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__content__single__bottom d-flex align-items-center mt-2">
+                                <div class="news__publish__date pe-2 d-flex flex-column align-items-center">
+                                    <div class="month">August</div>
+                                    <div class="date">4</div>
+                                    <div class="year">2023</div>
+                                </div>
+                                <div class="news__content__single__title ps-2"> <p>title Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It </p></div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer text-capitalize text-center">
+        developed by tilahun feyissa
+    </div>
+
+</div>
+
 
     <script src="./script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"></script>
-
 </body>
 </html>
